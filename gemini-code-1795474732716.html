@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avante Design — Graphic & Branding</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #F4F2EE;
+      --surface: #FAF9F6;
+      --ink: #263442;
+      --ink-soft: #526273;
+      --line: rgba(38, 52, 66, 0.14);
+      --accent: #263442;
+      --accent-soft: rgba(38, 52, 66, 0.07);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(244, 242, 238, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 76px;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand-lockup {
+      display: inline-flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: var(--ink);
+    }
+
+    .brand-wordmark {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 700;
+      font-size: 1.65rem;
+      letter-spacing: 0.08em;
+      line-height: 1;
+    }
+
+    .brand-sub {
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin-top: 4px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--ink-soft);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    nav a:hover { color: var(--ink); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 6px;
+      border: 1px solid var(--ink);
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--ink);
+      color: var(--surface);
+    }
+
+    .btn-primary:hover { opacity: 0.9; }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--ink);
+    }
+
+    .btn-ghost:hover { background: var(--accent-soft); }
+
+    .hero {
+      padding: 72px 0 64px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.85fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--ink-soft);
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      line-height: 1.06;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .lead {
+      font-size: 1.05rem;
+      color: var(--ink-soft);
+      max-width: 60ch;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .identity-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 28px;
+    }
+
+    .identity-card h2 {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .identity-card p {
+      font-size: 0.92rem;
+      color: var(--ink-soft);
+      margin-bottom: 16px;
+    }
+
+    .swatch-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .swatch {
+      flex: 1;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 10px;
+      font-size: 0.75rem;
+    }
+
+    section {
+      padding: 68px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-head {
+      margin-bottom: 36px;
+      max-width: 68ch;
+    }
+
+    .section-head h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2rem, 3.8vw, 2.8rem);
+      line-height: 1.12;
+      margin-bottom: 12px;
+    }
+
+    .section-head p {
+      color: var(--ink-soft);
+      font-size: 0.98rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-body {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+
+    .badge {
+      align-self: flex-start;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--ink);
+    }
+
+    .card h3 {
+      font-size: 1.15rem;
+      line-height: 1.3;
+    }
+
+    .card p {
+      font-size: 0.92rem;
+      color: var(--ink-soft);
+    }
+
+    .source-tag {
+      margin-top: auto;
+      padding-top: 10px;
+      border-top: 1px solid var(--line);
+      font-size: 0.78rem;
+      color: var(--ink-soft);
+      font-weight: 600;
+    }
+
+    .filter-bar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .filter-btn {
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--ink);
+      font-family: inherit;
+      font-size: 0.86rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .filter-btn.active {
+      background: var(--ink);
+      color: var(--surface);
+      border-color: var(--ink);
+    }
+
+    .mock-stage {
+      min-height: 210px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .mock-tech {
+      background: #14171c;
+      color: #f4f2ee;
+    }
+
+    .mock-watch {
+      background: #1d1b18;
+      color: #f4f2ee;
+    }
+
+    .mock-bottle {
+      background: #e4e1dc;
+      color: #263442;
+    }
+
+    .mock-avante {
+      background: #263442;
+      color: #f4f2ee;
+    }
+
+    .mock-paper {
+      background: #eae6df;
+      color: #263442;
+    }
+
+    .mock-kicker {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      opacity: 0.8;
+    }
+
+    .mock-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.7rem;
+      line-height: 1.1;
+      margin: 8px 0;
+    }
+
+    .mock-meta {
+      font-size: 0.82rem;
+      opacity: 0.88;
+    }
+
+    .brief-box {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .field label {
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      padding: 11px 13px;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+      background: var(--bg);
+      color: var(--ink);
+      font-family: inherit;
+      font-size: 0.92rem;
+    }
+
+    pre {
+      white-space: pre-wrap;
+      word-break: break-word;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      font-size: 0.86rem;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+
+    dialog {
+      margin: auto;
+      max-width: 540px;
+      width: calc(100% - 32px);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface);
+      color: var(--ink);
+      padding: 24px;
+    }
+
+    dialog::backdrop {
+      background: rgba(20, 26, 33, 0.55);
+    }
+
+    footer {
+      padding: 36px 0;
+      text-align: center;
+      color: var(--ink-soft);
+      font-size: 0.88rem;
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid,
+      .grid-3,
+      .brief-box {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav-wrap">
+      <a class="brand-lockup" href="#topo">
+        <span class="brand-wordmark">AVANTE</span>
+        <span class="brand-sub">DESIGN · GRAPHIC & BRANDING</span>
+      </a>
+      <nav>
+        <a href="#abordagem">Abordagem</a>
+        <a href="#catalogo">Modelos e Criação</a>
+        <a href="#orcamento">Orçamento</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="topo">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Identidade Visual, Peças de Produto e Direção de Arte</p>
+          <h1>Design claro, consistente e construído com critério.</h1>
+          <p class="lead">
+            A <strong>Avante Design</strong> desenvolve identidades visuais, peças promocionais para produtos e sistemas gráficos sob medida. Trabalhamos tanto a partir de <strong>modelos adaptáveis</strong> quanto com <strong>criação 100% do zero</strong>, constru
