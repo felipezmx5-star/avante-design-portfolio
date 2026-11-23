@@ -1,1 +1,795 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avante Design — Graphic & Branding</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #F4F2EE;
+      --surface: #FAF9F6;
+      --ink: #263442;
+      --ink-soft: #526273;
+      --line: rgba(38, 52, 66, 0.14);
+      --accent: #263442;
+      --accent-soft: rgba(38, 52, 66, 0.07);
+    }
 
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(244, 242, 238, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 76px;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand-lockup {
+      display: inline-flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: var(--ink);
+    }
+
+    .brand-wordmark {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 700;
+      font-size: 1.65rem;
+      letter-spacing: 0.08em;
+      line-height: 1;
+    }
+
+    .brand-sub {
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin-top: 4px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--ink-soft);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    nav a:hover { color: var(--ink); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 6px;
+      border: 1px solid var(--ink);
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--ink);
+      color: var(--surface);
+    }
+
+    .btn-primary:hover { opacity: 0.9; }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--ink);
+    }
+
+    .btn-ghost:hover { background: var(--accent-soft); }
+
+    .hero {
+      padding: 72px 0 64px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.85fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--ink-soft);
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      line-height: 1.06;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .lead {
+      font-size: 1.05rem;
+      color: var(--ink-soft);
+      max-width: 60ch;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .identity-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 28px;
+    }
+
+    .identity-card h2 {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .identity-card p {
+      font-size: 0.92rem;
+      color: var(--ink-soft);
+      margin-bottom: 16px;
+    }
+
+    .swatch-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .swatch {
+      flex: 1;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 10px;
+      font-size: 0.75rem;
+    }
+
+    section {
+      padding: 68px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-head {
+      margin-bottom: 36px;
+      max-width: 68ch;
+    }
+
+    .section-head h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2rem, 3.8vw, 2.8rem);
+      line-height: 1.12;
+      margin-bottom: 12px;
+    }
+
+    .section-head p {
+      color: var(--ink-soft);
+      font-size: 0.98rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-body {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+
+    .badge {
+      align-self: flex-start;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--ink);
+    }
+
+    .card h3 {
+      font-size: 1.15rem;
+      line-height: 1.3;
+    }
+
+    .card p {
+      font-size: 0.92rem;
+      color: var(--ink-soft);
+    }
+
+    .source-tag {
+      margin-top: auto;
+      padding-top: 10px;
+      border-top: 1px solid var(--line);
+      font-size: 0.78rem;
+      color: var(--ink-soft);
+      font-weight: 600;
+    }
+
+    .filter-bar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .filter-btn {
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--ink);
+      font-family: inherit;
+      font-size: 0.86rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .filter-btn.active {
+      background: var(--ink);
+      color: var(--surface);
+      border-color: var(--ink);
+    }
+
+    .mock-stage {
+      min-height: 210px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .mock-tech {
+      background: #14171c;
+      color: #f4f2ee;
+    }
+
+    .mock-watch {
+      background: #1d1b18;
+      color: #f4f2ee;
+    }
+
+    .mock-bottle {
+      background: #e4e1dc;
+      color: #263442;
+    }
+
+    .mock-avante {
+      background: #263442;
+      color: #f4f2ee;
+    }
+
+    .mock-paper {
+      background: #eae6df;
+      color: #263442;
+    }
+
+    .mock-kicker {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      opacity: 0.8;
+    }
+
+    .mock-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.7rem;
+      line-height: 1.1;
+      margin: 8px 0;
+    }
+
+    .mock-meta {
+      font-size: 0.82rem;
+      opacity: 0.88;
+    }
+
+    .brief-box {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .field label {
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      padding: 11px 13px;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+      background: var(--bg);
+      color: var(--ink);
+      font-family: inherit;
+      font-size: 0.92rem;
+    }
+
+    pre {
+      white-space: pre-wrap;
+      word-break: break-word;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      font-size: 0.86rem;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+
+    dialog {
+      margin: auto;
+      max-width: 540px;
+      width: calc(100% - 32px);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface);
+      color: var(--ink);
+      padding: 24px;
+    }
+
+    dialog::backdrop {
+      background: rgba(20, 26, 33, 0.55);
+    }
+
+    footer {
+      padding: 36px 0;
+      text-align: center;
+      color: var(--ink-soft);
+      font-size: 0.88rem;
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid,
+      .grid-3,
+      .brief-box {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav-wrap">
+      <a class="brand-lockup" href="#topo">
+        <span class="brand-wordmark">AVANTE</span>
+        <span class="brand-sub">DESIGN · GRAPHIC & BRANDING</span>
+      </a>
+      <nav>
+        <a href="#abordagem">Abordagem</a>
+        <a href="#catalogo">Modelos e Criação</a>
+        <a href="#orcamento">Orçamento</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="topo">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Identidade Visual, Peças de Produto e Direção de Arte</p>
+          <h1>Design claro, consistente e construído com critério.</h1>
+          <p class="lead">
+            A <strong>Avante Design</strong> desenvolve identidades visuais, peças promocionais para produtos e sistemas gráficos sob medida. Trabalhamos tanto a partir de <strong>modelos adaptáveis</strong> quanto com <strong>criação 100% do zero</strong>, construindo a identidade própria da sua marca sem depender de fórmulas prontas.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#catalogo">Ver modelos e projetos</a>
+            <a class="btn btn-ghost" href="#orcamento">Montar briefing</a>
+          </div>
+        </div>
+
+        <aside class="identity-card">
+          <h2>Base Cromática da Marca</h2>
+          <p>Paleta sóbria inspirada no papel off-white de estúdio e no azul-ardósia profundo para leitura limpa e presença profissional.</p>
+          <div class="swatch-row">
+            <div class="swatch" style="background:#F4F2EE;color:#263442;">
+              <strong>Off-White</strong><br />#F4F2EE
+            </div>
+            <div class="swatch" style="background:#263442;color:#F4F2EE;">
+              <strong>Ardósia</strong><br />#263442
+            </div>
+            <div class="swatch" style="background:#FAF9F6;color:#263442;">
+              <strong>Marfim</strong><br />#FAF9F6
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="abordagem">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Critério Técnico e Fontes de Referência</p>
+          <h2>Decisões visuais apoiadas em pesquisa e fundamentos do design</h2>
+          <p>
+            Em vez de promessas vazias ou tempo inventado, cada escolha de hierarquia, contraste e consistência visual segue referências consolidadas da área.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="card-body">
+              <span class="badge">Credibilidade Visual</span>
+              <h3>Primeira impressão e confiança</h3>
+              <p>Estudos clássicos sobre credibilidade na web mostram que o design visual e a organização da interface pesam diretamente na avaliação inicial de confiança do público.</p>
+              <div class="source-tag">Fonte: Stanford Web Credibility Research</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <span class="badge">Consistência de Marca</span>
+              <h3>Repetição coerente em cada ponto de contato</h3>
+              <p>Apresentar uma marca de forma consistente em canais e materiais ajuda no reconhecimento e na percepção de profissionalismo ao longo do tempo.</p>
+              <div class="source-tag">Fonte: Marq (Lucidpress) — Brand Consistency</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <span class="badge">Estrutura e Tipografia</span>
+              <h3>Grade, respiro e clareza editorial</h3>
+              <p>O uso de grades proporcionais, contraste adequado e hierarquia tipográfica clara reduz o ruído visual e facilita a leitura da proposta de valor.</p>
+              <div class="source-tag">Fontes: Josef Müller-Brockmann · Nielsen Norman Group</div>
+            </div>
+          </article>
+        </div>
+      </div>
+  </section>
+    <section id="catalogo">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Portfólio · Modelos Adaptáveis e Criação do Zero</p>
+          <h2>Não seguimos apenas modelos: criamos também do zero</h2>
+          <p>
+            Os <strong>Modelos Adaptáveis</strong> aceleram campanhas de produto com estrutura validada. Quando a sua marca precisa de personalidade exclusiva, fazemos a <strong>Criação do Zero</strong> — desenvolvendo a identidade visual completa da marca, logotipos, sistemas gráficos e peças originais.
+          </p>
+        </div>
+
+        <div class="filter-bar" role="tablist" aria-label="Filtrar portfólio">
+          <button class="filter-btn active" type="button" data-filter="todos">Todos (6)</button>
+          <button class="filter-btn" type="button" data-filter="modelo">Modelos Adaptáveis (3)</button>
+          <button class="filter-btn" type="button" data-filter="zero">Criação do Zero (3)</button>
+        </div>
+
+        <div class="grid-3" id="portfolio-grid">
+          <article class="card" data-category="modelo">
+            <div class="mock-stage mock-tech">
+              <span class="mock-kicker">Modelo Adaptável 01 · Áudio & Tech</span>
+              <div>
+                <div class="mock-title">Som Que Te Conecta</div>
+                <div class="mock-meta">Fones sem fio · Ícones de atributos · CTA direto</div>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="badge">Modelo Adaptável</span>
+              <h3>Campanha Produto Tech Escuro</h3>
+              <p>Baseado no exemplo de fones de ouvido com contraste escuro, destaque luminoso e lista lateral de benefícios para lançamentos rápidos.</p>
+              <button class="btn btn-ghost" type="button" data-open="0">Ver detalhes do modelo</button>
+            </div>
+          </article>
+
+          <article class="card" data-category="modelo">
+            <div class="mock-stage mock-watch">
+              <span class="mock-kicker">Modelo Adaptável 02 · Relojoaria & Luxo</span>
+              <div>
+                <div class="mock-title">Estilo em Cada Detalhe</div>
+                <div class="mock-meta">Tipografia serifada · Luz de estúdio · Pilares de qualidade</div>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="badge">Modelo Adaptável</span>
+              <h3>Vitrine Editorial de Relógio</h3>
+              <p>Baseado no exemplo de relógio analógico com estética sóbria, composição centralizada e selos verticais de sofisticação e durabilidade.</p>
+              <button class="btn btn-ghost" type="button" data-open="1">Ver detalhes do modelo</button>
+            </div>
+          </article>
+
+          <article class="card" data-category="modelo">
+            <div class="mock-stage mock-bottle">
+              <span class="mock-kicker">Modelo Adaptável 03 · Lifestyle & Utilidades</span>
+              <div>
+                <div class="mock-title">Qualidade · Estilo · Praticidade</div>
+                <div class="mock-meta">Fundo claro · Ícones circulares · Leitura objetiva</div>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="badge">Modelo Adaptável</span>
+              <h3>Ficha Visual de Garrafa Térmica</h3>
+              <p>Baseado no exemplo de garrafa minimalista em fundo neutro claro, ideal para destacar retenção térmica, vedação e leveza.</p>
+              <button class="btn btn-ghost" type="button" data-open="2">Ver detalhes do modelo</button>
+            </div>
+          </article>
+
+          <article class="card" data-category="zero">
+            <div class="mock-stage mock-avante">
+              <span class="mock-kicker">Criação do Zero 04 · Identidade de Marca</span>
+              <div>
+                <div class="mock-title">Sistema de Marca Autoral</div>
+                <div class="mock-meta">Logo · Grade · Regras de uso · Aplicações</div>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="badge">Criação do Zero</span>
+              <h3>Identidade Visual Proprietária</h3>
+              <p>Construção da identidade da sua marca do início ao fim: conceito, símbolo, tipografia, paleta, aplicações e manual prático de uso.</p>
+              <button class="btn btn-ghost" type="button" data-open="3">Ver escopo do zero</button>
+            </div>
+          </article>
+
+          <article class="card" data-category="zero">
+            <div class="mock-stage mock-paper">
+              <span class="mock-kicker">Criação do Zero 05 · Embalagem & Rótulo</span>
+              <div>
+                <div class="mock-title">Linha Botânica & Artesanal</div>
+                <div class="mock-meta">Estrutura de rótulo · Hierarquia · Acabamento</div>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="badge">Criação do Zero</span>
+              <h3>Embalagem e Apresentação Física</h3>
+              <p>Projeto original de embalagem para marcas que querem se diferenciar na prateleira ou no unboxing sem copiar padrões genéricos.</p>
+              <button class="btn btn-ghost" type="button" data-open="4">Ver escopo do zero</button>
+            </div>
+          </article>
+
+          <article class="card" data-category="zero">
+            <div class="mock-stage mock-avante">
+              <span class="mock-kicker">Criação do Zero 06 · Direção de Arte Digital</span>
+              <div>
+                <div class="mock-title">Campanha Completa Sob Medida</div>
+                <div class="mock-meta">Peças sociais · Banners · Apresentações comerciais</div>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="badge">Criação do Zero</span>
+              <h3>Pacote de Peças com Linguagem Própria</h3>
+              <p>Desdobramento visual exclusivo para lançamentos, catálogos e redes sociais mantendo a assinatura estética da marca em cada formato.</p>
+              <button class="btn btn-ghost" type="button" data-open="5">Ver escopo do zero</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="orcamento">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Briefing Direto</p>
+          <h2>Monte o resumo do seu projeto</h2>
+          <p>Escolha se você prefere adaptar um modelo ou criar a identidade da sua marca do zero e copie o texto pronto para enviar.</p>
+        </div>
+
+        <div class="brief-box">
+          <form id="brief-form">
+            <div class="field">
+              <label for="nome-marca">Nome da sua marca ou projeto</label>
+              <input id="nome-marca" type="text" placeholder="Ex.: Studio Norte ou sua marca" />
+            </div>
+
+            <div class="field">
+              <label for="tipo-servico">Tipo de trabalho</label>
+              <select id="tipo-servico">
+                <option value="Criação do Zero (Identidade própria da marca)">Criação do Zero (Identidade própria da marca)</option>
+                <option value="Modelo Adaptável (Produto / Campanha)">Modelo Adaptável (Produto / Campanha)</option>
+                <option value="Criação do Zero + Peças de Divulgação">Criação do Zero + Peças de Divulgação</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="detalhes">O que você precisa (produto, objetivo ou prazo)</label>
+              <textarea id="detalhes" rows="3" placeholder="Ex.: Quero criar a identidade visual da minha marca do zero e peças para lançamento."></textarea>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Atualizar resumo</button>
+          </form>
+
+          <div>
+            <div class="field">
+              <label>Resumo pronto para copiar</label>
+              <pre id="brief-output">Olá, Avante Design! Gostaria de solicitar um orçamento para a marca [Sua Marca] na modalidade: Criação do Zero (Identidade própria da marca).</pre>
+            </div>
+            <button class="btn btn-ghost" id="copy-brief" type="button">Copiar resumo</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="detail-dialog">
+    <h3 id="dialog-title" style="margin-bottom:10px;"></h3>
+    <p id="dialog-desc" style="color:var(--ink-soft);margin-bottom:14px;"></p>
+    <p id="dialog-extra" style="font-size:0.9rem;margin-bottom:20px;"></p>
+    <button class="btn btn-primary" id="close-dialog" type="button">Fechar</button>
+  </dialog>
+
+  <footer>
+    <div class="container">
+      <strong>AVANTE DESIGN</strong> · Graphic & Branding — Modelos adaptáveis e criação do zero.
+    </div>
+  </footer>
+
+  <script>
+    const items = [
+      {
+        title: "Modelo Adaptável 01 — Campanha Produto Tech Escuro",
+        desc: "Estrutura visual voltada a dispositivos eletrônicos e acessórios com fundo escuro, destaque de borda e leitura rápida de benefícios.",
+        extra: "Personalizável com a foto do seu produto, cores, ícones de especificações e chamada para ação."
+      },
+      {
+        title: "Modelo Adaptável 02 — Vitrine Editorial de Relógio",
+        desc: "Composição elegante com tipografia clássica, iluminação dramática e divisão clara de atributos de qualidade.",
+        extra: "Personalizável com a foto do item, textos institucionais/comerciais e paleta da sua campanha."
+      },
+      {
+        title: "Modelo Adaptável 03 — Ficha Visual de Garrafa Térmica",
+        desc: "Layout limpo em tom claro com ícones circulares e destaque objetivo para características funcionais do produto.",
+        extra: "Personalizável com a foto do produto, diferenciais técnicos e chamada comercial."
+      },
+      {
+        title: "Criação do Zero 04 — Identidade Visual Proprietária",
+        desc: "Desenvolvimento completo da identidade da sua marca sem usar modelos prontos, partindo do posicionamento e da essência do negócio.",
+        extra: "Inclui proposta visual original, sistema tipográfico, paleta de cores e diretrizes para manter a consistência."
+      },
+      {
+        title: "Criação do Zero 05 — Embalagem e Apresentação Física",
+        desc: "Projeto visual exclusivo para embalagens, rótulos e materiais físicos alinhados ao público da marca.",
+        extra: "Construído sob medida para o formato do produto e para a experiência de quem recebe."
+      },
+      {
+        title: "Criação do Zero 06 — Pacote de Peças com Linguagem Própria",
+        desc: "Conjunto de peças visuais criadas do zero para divulgar sua marca com identidade autoral.",
+        extra: "Ideal para quem quer fugir de templates repetidos e consolidar presença própria."
+      }
+    ];
+
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const cards = document.querySelectorAll("#portfolio-grid .card");
+
+    filterButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const filter = btn.dataset.filter;
+        filterButtons.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        cards.forEach((card) => {
+          const match = filter === "todos" || card.dataset.category === filter;
+          card.style.display = match ? "flex" : "none";
+        });
+      });
+    });
+
+    const dialog = document.getElementById("detail-dialog");
+    const dialogTitle = document.getElementById("dialog-title");
+    const dialogDesc = document.getElementById("dialog-desc");
+    const dialogExtra = document.getElementById("dialog-extra");
+    const closeDialog = document.getElementById("close-dialog");
+
+    document.querySelectorAll("[data-open]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const item = items[Number(button.dataset.open)];
+        if (!item) return;
+        dialogTitle.textContent = item.title;
+        dialogDesc.textContent = item.desc;
+        dialogExtra.textContent = item.extra;
+        dialog.showModal();
+      });
+    });
+
+    closeDialog.addEventListener("click", () => dialog.close());
+
+    const form = document.getElementById("brief-form");
+    const output = document.getElementById("brief-output");
+    const copyBtn = document.getElementById("copy-brief");
+
+    function updateSummary() {
+      const brand = document.getElementById("nome-marca").value.trim() || "[Sua Marca]";
+      const service = document.getElementById("tipo-servico").value;
+      const details = document.getElementById("detalhes").value.trim();
+
+      output.textContent =
+        `Olá, Avante Design! Gostaria de solicitar um orçamento para ${brand} na modalidade: ${service}.` +
+        (details ? `\nDetalhes: ${details}` : "");
+    }
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      updateSummary();
+    });
+
+    form.addEventListener("input", updateSummary);
+
+    copyBtn.addEventListener("click", async () => {
+      updateSummary();
+      try {
+        await navigator.clipboard.writeText(output.textContent);
+        copyBtn.textContent = "Resumo copiado!";
+        setTimeout(() => { copyBtn.textContent = "Copiar resumo"; }, 2000);
+      } catch {
+        copyBtn.textContent = "Selecione o texto acima para copiar";
+      }
+    });
+  </script>
+</body>
+    </html>
