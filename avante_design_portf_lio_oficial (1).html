@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avante Design — Graphic & Branding | Portfólio Oficial</title>
+    
+    <!-- Google Fonts: Cinzel/Playfair para toque editorial, Plus Jakarta Sans & Inter para precisão técnica -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        paper: {
+                            light: '#FAF9F6',
+                            DEFAULT: '#F4F2EE',
+                            dark: '#EAE6DF',
+                            border: '#D6D1C7'
+                        },
+                        slatebrand: {
+                            DEFAULT: '#263442',
+                            dark: '#1A242E',
+                            light: '#3A4D60',
+                            muted: '#5C6B79'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif'],
+                        logo: ['Cinzel', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Textura sutil de papel algodão fiel à identidade visual */
+        body {
+            background-color: #F4F2EE;
+            color: #263442;
+            background-image: radial-gradient(#26344208 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+
+        .paper-surface {
+            background-color: #FAF9F6;
+            box-shadow: 0 10px 30px -10px rgba(38, 52, 66, 0.06);
+        }
+
+        /* Animações suaves */
+        .card-hover {
+            transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px -15px rgba(38, 52, 66, 0.14);
+        }
+
+        /* Estilo customizado para scrollbar minimalista */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #EAE6DF;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #5C6B79;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #263442;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-slatebrand selection:text-paper-light">
+
+    <!-- ==================== HEADER FIXO MINIMALISTA ==================== -->
+    <header class="sticky top-0 z-40 bg-paper/90 backdrop-blur-md border-b border-paper-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo Vetorial Recriada com Fidelidade à Marca -->
+            <a href="#" class="flex items-center gap-3 group focus:outline-none" aria-label="Avante Design Início">
+                <svg class="h-11 w-auto text-slatebrand transition-transform duration-300 group-hover:scale-[1.02]" viewBox="0 0 290 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Tipografia AVANTE com seta ascendente integrada entre A e V -->
+                    <g fill="#263442">
+                        <!-- Letra A estilizada -->
+                        <path d="M22 42L36 10H42L56 42H49.5L46 33.5H32L28.5 42H22ZM34.2 28H43.8L39 16.5L34.2 28Z"/>
+                        <!-- Letra V estilizada -->
+                        <path d="M56 10H62.8L73 34.5L83.2 10H90L75.5 42H70.5L56 10Z"/>
+                        <!-- Seta ascendente atravessando A e V -->
+                        <path d="M12 45C24 39 33 31 44 33C53 34.5 64 26 78 13L73 10.5L87 7L84.5 21L81.5 16.5C66 30.5 54 39.5 43 38C33 36.5 24 44 14 48.5L12 45Z" fill="#263442"/>
+                        <!-- Letra A -->
+                        <path d="M92 42L106 10H112L126 42H119.5L116 33.5H102L98.5 42H92ZM104.2 28H113.8L109 16.5L104.2 28Z"/>
+                        <!-- Letra N -->
+                        <path d="M133 42V10H139L157 32.5V10H163V42H157.5L139 19V42H133Z"/>
+                        <!-- Letra T -->
+                        <path d="M170 10H198V15.5H187V42H181V15.5H170V10Z"/>
+                        <!-- Letra E -->
+                        <path d="M205 10H230V15.5H211V23H227V28.5H211V36.5H231V42H205V10Z"/>
+                    </g>
+                    <!-- Subtítulo DESIGN -->
+                    <text x="126" y="59" text-anchor="middle" fill="#263442" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="13.5" letter-spacing="5.5">DESIGN</text>
+                    <!-- Tagline GRAPHIC & BRANDING -->
+                    <text x="126" y="72" text-anchor="middle" fill="#5C6B79" font-family="'Inter', sans-serif" font-weight="600" font-size="7.5" letter-spacing="3.2">GRAPHIC &amp; BRANDING</text>
+                </svg>
+            </a>
+
+            <!-- Navegação Desktop -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slatebrand-muted">
+                <a href="#catalogo" class="hover:text-slatebrand transition-colors">Modelos &amp; Projetos</a>
+                <a href="#metodologia" class="hover:text-slatebrand transition-colors">Sob Medida vs. Modelos</a>
+                <a href="#fundamentos" class="hover:text-slatebrand transition-colors">Fundamentos</a>
+                <a href="#orcamento" class="hover:text-slatebrand transition-colors">Escopo &amp; Contato</a>
+            </nav>
+
+            <!-- CTA Header -->
+            <div class="flex items-center gap-3">
+                <a href="#orcamento" class="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-slatebrand text-paper-light text-sm font-semibold hover:bg-slatebrand-dark transition-all shadow-sm">
+                    Iniciar Projeto
+                </a>
+                <!-- Botão Menu Mobile -->
+                <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-lg border border-paper-border text-slatebrand hover:bg-paper-dark" aria-label="Abrir Menu">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-paper-light border-b border-paper-border px-4 pt-3 pb-5 space-y-2">
+            <a href="#catalogo" class="block py-2 px-3 rounded-lg text-sm font-medium text-slatebrand hover:bg-paper-dark">Modelos &amp; Projetos</a>
+            <a href="#metodologia" class="block py-2 px-3 rounded-lg text-sm font-medium text-slatebrand hover:bg-paper-dark">Sob Medida vs. Modelos</a>
+            <a href="#fundamentos" class="block py-2 px-3 rounded-lg text-sm font-medium text-slatebrand hover:bg-paper-dark">Fundamentos Técnicos</a>
+            <a href="#orcamento" class="block py-2 px-3 rounded-lg text-sm font-medium text-slatebrand hover:bg-paper-dark">Configurar Orçamento</a>
+        </div>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="relative pt-14 pb-20 lg:pt-24 lg:pb-28 border-b border-paper-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Coluna Principal de Texto -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-paper-dark border border-paper-border text-xs font-semibold tracking-wider uppercase text-slatebrand">
+                        <span class="w-2 h-2 rounded-full bg-slatebrand"></span>
+                        Estúdio de Design Gráfico &amp; Identidade Visual
+                    </div>
+                    
+                    <h1 class="font-display text-4xl sm:text-5xl lg:text-[3.4rem] font-extrabold text-slatebrand leading-[1.12] tracking-tight">
+                        Design gráfico com direção estratégica e precisão visual.
+                    </h1>
+                    
+                    <p class="text-base sm:text-lg text-slatebrand-muted leading-relaxed max-w-2xl">
+                        Na <strong class="text-slatebrand font-semibold">Avante Design</strong>, unimos rigor tipográfico, psicologia visual e arquitetura de conversão. Você pode escolher entre <strong class="text-slatebrand font-semibold">modelos estruturados de alta performance</strong> para campanhas rápidas ou solicitar a <strong class="text-slatebrand font-semibold">criação autoral 100% do zero</strong> da identidade visual da sua marca.
+                    </p>
+                    
+                    <div class="pt-2 flex flex-wrap items-center gap-4">
+                        <a href="#catalogo" class="px-6 py-3.5 rounded-xl bg-slatebrand text-paper-light font-semibold text-sm hover:bg-slatebrand-dark transition-all shadow-md flex items-center gap-2">
+                            Explorar Catálogo &amp; Projetos
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </a>
+                        <a href="#metodologia" class="px-6 py-3.5 rounded-xl bg-paper-light border border-paper-border text-slatebrand font-semibold text-sm hover:bg-paper-dark transition-all">
+                            Entender Formatos de Criação
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Coluna Direita: Cartão de Evidências & Rigor de Mercado -->
+                <div class="lg:col-span-5">
+                    <div class="paper-surface rounded-2xl border border-paper-border p-6 sm:p-8 space-y-6 relative overflow-hidden">
+                        <div class="flex items-center justify-between border-b border-paper-border pb-4">
+                            <div>
+                                <span class="text-[11px] font-bold uppercase tracking-widest text-slatebrand-muted">Por que investir em design</span>
+                                <h2 class="font-display text-lg font-bold text-slatebrand mt-0.5">Evidências &amp; Impacto Comercial</h2>
+                            </div>
+                            <div class="w-10 h-10 rounded-xl bg-paper-dark flex items-center justify-center text-slatebrand">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                            </div>
+                        </div>
+
+                        <div class="space-y-5">
+                            <!-- Dado 1: Stanford -->
+                            <div class="flex gap-4 items-start">
+                                <span class="font-display text-2xl font-extrabold text-slatebrand shrink-0 w-16">75%</span>
+                                <div>
+                                    <p class="text-sm font-medium text-slatebrand">dos consumidores julgam a credibilidade de uma empresa exclusivamente pela apresentação visual.</p>
+                                    <span class="text-xs text-slatebrand-muted block mt-1">Fonte: <em>Stanford Web Credibility Research</em></span>
+                                </div>
+                            </div>
+
+                            <!-- Dado 2: Marq / Lucidpress -->
+                            <div class="flex gap-4 items-start pt-4 border-t border-paper-border/70">
+                                <span class="font-display text-2xl font-extrabold text-slatebrand shrink-0 w-16">+23%</span>
+                                <div>
+                                    <p class="text-sm font-medium text-slatebrand">de aumento médio na percepção de valor e receita em marcas com identidade visual consistente.</p>
+                                    <span class="text-xs text-slatebrand-muted block mt-1">Fonte: <em>Marq (Lucidpress) — State of Brand Consistency</em></span>
+                                </div>
+                            </div>
+
+                            <!-- Dado 3: 3M / Visual Processing -->
+                            <div class="flex gap-4 items-start pt-4 border-t border-paper-border/70">
+                                <span class="font-display text-2xl font-extrabold text-slatebrand shrink-0 w-16">50ms</span>
+                                <div>
+                                    <p class="text-sm font-medium text-slatebrand">é o tempo que o cérebro leva para formar uma primeira impressão estética sobre uma peça ou marca.</p>
+                                    <span class="text-xs text-slatebrand-muted block mt-1">Fonte: <em>Behaviour &amp; Information Technology (Lindgaard et al.)</em></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SEÇÃO: CATÁLOGO DE MODELOS & PROJETOS ==================== -->
+    <section id="catalogo" class="py-20 lg:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Cabeçalho da Seção + Explicação Transparente -->
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+                <div class="max-w-2xl space-y-3">
+                    <span class="text-xs font-bold uppercase tracking-widest text-slatebrand-muted">Portfólio &amp; Estruturas Visuais</span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slatebrand">
+                        Modelos Validados &amp; Criação Autoral do Zero
+                    </h2>
+                    <p class="text-slatebrand-muted text-sm sm:text-base leading-relaxed">
+                        Abaixo apresentamos com total transparência tanto os nossos <strong class="text-slatebrand">Modelos Estratégicos Adaptáveis</strong> (ideais para anúncios, social media e produtos) quanto projetos de <strong class="text-slatebrand">Identidade Visual Criados do Zero</strong>. Clique em qualquer peça para inspecionar os detalhes técnicos.
+                    </p>
+                </div>
+
+                <!-- Filtros Interativos -->
+                <div class="inline-flex flex-wrap p-1.5 rounded-xl bg-paper-dark border border-paper-border gap-1 self-start lg:self-end" role="tablist">
+                    <button onclick="filterPortfolio('all')" data-filter="all" class="filter-btn active px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-slatebrand text-paper-light shadow-sm">
+                        Todos (6)
+                    </button>
+                    <button onclick="filterPortfolio('modelo')" data-filter="modelo" class="filter-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all text-slatebrand-muted hover:text-slatebrand">
+                        Modelos Adaptáveis (3)
+                    </button>
+                    <button onclick="filterPortfolio('autoral')" data-filter="autoral" class="filter-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all text-slatebrand-muted hover:text-slatebrand">
+                        Criação do Zero (3)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Grid de Projetos e Modelos -->
+            <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- ==================== MODELO 01 (FONES BLUETOOTH - ENVIADO PELO USUÁRIO) ==================== -->
+                <article data-category="modelo" onclick="openProjectModal('modelo1')" class="portfolio-item card-hover cursor-pointer group paper-surface rounded-2xl border border-paper-border overflow-hidden flex flex-col">
+                    <!-- Preview Visual Fiel ao Exemplo 1 -->
+                    <div class="relative aspect-[4/5] bg-[#0B0B0C] p-6 flex flex-col justify-between overflow-hidden select-none">
+                        <!-- Luzes de fundo douradas/âmbar -->
+                        <div class="absolute -top-10 -left-10 w-40 h-40 bg-amber-500/20 blur-2xl rotate-45"></div>
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 rounded-full border-2 border-amber-400/70 shadow-[0_0_45px_rgba(245,158,11,0.45)]"></div>
+                        
+                        <!-- Selo Superior -->
+                        <div class="relative z-10 flex justify-between items-center">
+                            <span class="px-2.5 py-1 rounded-md bg-amber-400 text-black text-[10px] font-extrabold uppercase tracking-wider">
+                                Modelo 01 • Adaptável
+                            </span>
+                            <span class="text-[10px] text-amber-200/80 font-medium">Ads &amp; Produto Tech</span>
+                        </div>
+
+                        <!-- Conteúdo Tipográfico do Modelo 1 -->
+                        <div class="relative z-10 text-center mt-2">
+                            <div class="font-display font-black italic text-3xl tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400">
+                                EXEMPLO
+                            </div>
+                            <div class="text-[9px] tracking-[0.28em] text-gray-300 uppercase mt-0.5">SOM QUE TE CONECTA</div>
+                            <div class="w-32 h-[1px] bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto my-2"></div>
+                            <p class="text-[11px] text-gray-200 leading-tight">
+                                Qualidade, conforto e tecnologia<br>em <span class="text-amber-400 font-bold">um só produto.</span>
+                            </p>
+                        </div>
+
+                        <!-- Centro: Ilustração Minimalista de Fones + Coluna de Benefícios -->
+                        <div class="relative z-10 grid grid-cols-12 items-center my-auto py-2">
+                            <div class="col-span-7 flex flex-col items-center justify-center">
+                                <!-- Representação Vetorial Estilizada dos Fones & Case -->
+                                <svg class="w-32 h-32 drop-shadow-[0_10px_20px_rgba(0,0,0,0.9)]" viewBox="0 0 140 140" fill="none">
+                                    <!-- Fone esquerdo -->
+                                    <rect x="34" y="22" width="16" height="44" rx="8" fill="#1F2024" stroke="#F59E0B" stroke-width="0.8"/>
+                                    <ellipse cx="32" cy="30" rx="9" ry="7" fill="#141416" stroke="#52525B" stroke-width="0.8"/>
+                                    <rect x="41" y="36" width="2.5" height="14" rx="1.2" fill="#FFFFFF"/>
+                                    <!-- Fone direito -->
+                                    <rect x="74" y="34" width="15" height="40" rx="7.5" fill="#1F2024" stroke="#F59E0B" stroke-width="0.8"/>
+                                    <ellipse cx="72" cy="41" rx="8.5" ry="6.5" fill="#141416" stroke="#52525B" stroke-width="0.8"/>
+                                    <rect x="80" y="47" width="2.5" height="13" rx="1.2" fill="#FFFFFF"/>
+                                    <!-- Case de carregamento -->
+                                    <rect x="24" y="72" width="76" height="46" rx="18" fill="url(#caseGrad)" stroke="#F59E0B" stroke-width="0.9"/>
+                                    <rect x="57" y="96" width="10" height="2.5" rx="1.2" fill="#FFFFFF"/>
+                                    <defs>
+                                        <linearGradient id="caseGrad" x1="24" y1="72" x2="100" y2="118" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#27272A"/>
+                                            <stop offset="1" stop-color="#09090B"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="col-span-5 space-y-2.5 text-center">
+                                <div class="flex flex-col items-center">
+                                    <span class="w-6 h-6 rounded-full border border-amber-400 text-amber-400 flex items-center justify-center text-[10px]">ılıl</span>
+                                    <span class="text-[8px] text-gray-200 mt-0.5 leading-tight">Som Imersivo</span>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <span class="w-6 h-6 rounded-full border border-amber-400 text-amber-400 flex items-center justify-center text-[10px]">⚡</span>
+                                    <span class="text-[8px] text-gray-200 mt-0.5 leading-tight">Longa Duração</span>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <span class="w-6 h-6 rounded-full border border-amber-400 text-amber-400 flex items-center justify-center text-[10px]">✦</span>
+                                    <span class="text-[8px] text-gray-200 mt-0.5 leading-tight">Design Leve</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rodapé do Card Visual -->
+                        <div class="relative z-10 text-center">
+                            <div class="inline-block px-5 py-1.5 rounded-full bg-gradient-to-r from-amber-500 to-yellow-400 text-black font-extrabold text-[10px] tracking-wide shadow-lg">
+                                GARANTA JÁ O SEU! →
+                            </div>
+                            <div class="text-[7px] tracking-[0.25em] text-gray-400 uppercase mt-2">OUÇA MAIS. VIVA MELHOR.</div>
+                        </div>
+                    </div>
+
+                    <!-- Informações do Card -->
+                    <div class="p-6 flex-1 flex flex-col justify-between bg-paper-light">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-2">
+                                <span class="text-xs font-bold uppercase tracking-wider text-slatebrand-muted">Modelo de Alta Conversão</span>
+                                <span class="text-xs font-medium px-2 py-0.5 rounded bg-paper-dark text-slatebrand">Social &amp; Tráfego</span>
+                            </div>
+                            <h3 class="font-display text-lg font-bold text-slatebrand group-hover:text-slatebrand-light transition-colors">
+                                Modelo 01 — Tech &amp; Impacto Comercial
+                            </h3>
+                            <p class="text-sm text-slatebrand-muted mt-2 leading-relaxed">
+                                Arquitetura visual de alto contraste com foco em benefícios diretos, iluminação dramática e chamada para ação imediata. Adaptável para eletrônicos e lançamentos.
+                            </p>
+                        </div>
+                        <div class="pt-4 mt-4 border-t border-paper-border flex items-center justify-between text-xs font-semibold text-slatebrand">
+                            <span>Ver estrutura e especificações</span>
+                            <span class="group-hover:translate-x-1 transition-transform">→</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ==================== MODELO 02 (RELÓGIO CLÁSSICO - ENVIADO PELO USUÁRIO) ==================== -->
+                <article data-category="modelo" onclick="openProjectModal('modelo2')" class="portfolio-item card-hover cursor-pointer group paper-surface rounded-2xl border border-paper-border overflow-hidden flex flex-col">
+                    <!-- Preview Visual Fiel ao Exemplo 2 -->
+                    <div class="relative aspect-[4/5] bg-[#181614] p-6 flex flex-col justify-between overflow-hidden select-none">
+                        <!-- Feixe diagonal sutil -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-[#2C2723] via-[#181614] to-[#0E0D0C]"></div>
+                        <div class="absolute -top-10 right-0 w-64 h-32 bg-stone-400/10 -rotate-25 blur-xl"></div>
+
+                        <!-- Selo Superior -->
+                        <div class="relative z-10 flex justify-between items-center">
+                            <span class="px-2.5 py-1 rounded-md bg-[#D6BE96] text-[#181614] text-[10px] font-extrabold uppercase tracking-wider">
+                                Modelo 02 • Adaptável
+                            </span>
+                            <span class="text-[10px] text-[#D6BE96]/80 font-medium">Luxo &amp; Editorial</span>
+                        </div>
+
+                        <!-- Tipografia Serifada Elegante -->
+                        <div class="relative z-10 text-center mt-2">
+                            <div class="flex items-center justify-center gap-2">
+                                <span class="w-4 h-[1px] bg-[#D6BE96]/50"></span>
+                                <span class="font-serif text-3xl tracking-[0.14em] text-[#F5EFE6]">EXEMPLO</span>
+                                <span class="w-4 h-[1px] bg-[#D6BE96]/50"></span>
+                            </div>
+                            <div class="text-[8px] tracking-[0.32em] text-[#D6BE96] uppercase mt-1">ESTILO EM CADA DETALHE</div>
+                        </div>
+
+                        <!-- Centro: Relógio Minimalista + 3 Pilares -->
+                        <div class="relative z-10 grid grid-cols-12 items-center my-auto py-2">
+                            <div class="col-span-7 flex justify-center">
+                                <!-- Vetor Relógio Clássico -->
+                                <svg class="w-32 h-32 drop-shadow-[0_14px_20px_rgba(0,0,0,0.85)]" viewBox="0 0 140 140" fill="none">
+                                    <!-- Pulseira superior e inferior -->
+                                    <rect x="52" y="12" width="36" height="26" rx="3" fill="#292725" stroke="#57534E" stroke-width="1"/>
+                                    <rect x="52" y="102" width="36" height="26" rx="3" fill="#292725" stroke="#57534E" stroke-width="1"/>
+                                    <!-- Caixa do relógio -->
+                                    <circle cx="70" cy="70" r="38" fill="#1C1917" stroke="#A8A29E" stroke-width="3.5"/>
+                                    <circle cx="70" cy="70" r="32" fill="#0C0A09" stroke="#D6BE96" stroke-width="0.6"/>
+                                    <!-- Ponteiros -->
+                                    <line x1="70" y1="70" x2="70" y2="48" stroke="#E7E5E4" stroke-width="2" stroke-linecap="round"/>
+                                    <line x1="70" y1="70" x2="88" y2="62" stroke="#D6BE96" stroke-width="1.5" stroke-linecap="round"/>
+                                    <circle cx="70" cy="70" r="2.5" fill="#D6BE96"/>
+                                </svg>
+                            </div>
+                            <div class="col-span-5 space-y-3 text-center">
+                                <div>
+                                    <div class="text-[#D6BE96] text-xs">◇</div>
+                                    <div class="text-[7.5px] tracking-widest text-stone-300 uppercase mt-0.5">Design Sofisticado</div>
+                                </div>
+                                <div class="w-8 h-[1px] bg-[#D6BE96]/30 mx-auto"></div>
+                                <div>
+                                    <div class="text-[#D6BE96] text-xs">✓</div>
+                                    <div class="text-[7.5px] tracking-widest text-stone-300 uppercase mt-0.5">Alta Durabilidade</div>
+                                </div>
+                                <div class="w-8 h-[1px] bg-[#D6BE96]/30 mx-auto"></div>
+                                <div>
+                                    <div class="text-[#D6BE96] text-xs">✦</div>
+                                    <div class="text-[7.5px] tracking-widest text-stone-300 uppercase mt-0.5">Conforto Absoluto</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA Minimalista Contorno Dourado -->
+                        <div class="relative z-10 text-center">
+                            <div class="inline-block px-5 py-1.5 rounded-full border border-[#D6BE96] text-[#F5EFE6] text-[9px] tracking-[0.2em] uppercase">
+                                Garanta já o seu →
+                            </div>
+                            <div class="text-[7px] tracking-[0.25em] text-stone-400 uppercase mt-2">QUALIDADE QUE VOCÊ SENTE</div>
+                        </div>
+                    </div>
+
+                    <!-- Informações do Card -->
+                    <div class="p-6 flex-1 flex flex-col justify-between bg-paper-light">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-2">
+                                <span class="text-xs font-bold uppercase tracking-wider text-slatebrand-muted">Modelo Editorial Premium</span>
+                                <span class="text-xs font-medium px-2 py-0.5 rounded bg-paper-dark text-slatebrand">Alto Valor</span>
+                            </div>
+                            <h3 class="font-display text-lg font-bold text-slatebrand group-hover:text-slatebrand-light transition-colors">
+                                Modelo 02 — Sofisticação &amp; Atemporalidade
+                            </h3>
+                            <p class="text-sm text-slatebrand-muted mt-2 leading-relaxed">
+                                Tipografia serifada de alto contraste combinada com espaço negativo e filetes dourados. Ideal para relojoaria, moda, arquitetura e serviços de alto padrão.
+                            </p>
+                        </div>
+                        <div class="pt-4 mt-4 border-t border-paper-border flex items-center justify-between text-xs font-semibold text-slatebrand">
+                            <span>Ver estrutura e especificações</span>
+                            <span class="group-hover:translate-x-1 transition-transform">→</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ==================== MODELO 03 (GARRAFA TÉRMICA - ENVIADO PELO USUÁRIO) ==================== -->
+                <article data-category="modelo" onclick="openProjectModal('modelo3')" class="portfolio-item card-hover cursor-pointer group paper-surface rounded-2xl border border-paper-border overflow-hidden flex flex-col">
+                    <!-- Preview Visual Fiel ao Exemplo 3 -->
+                    <div class="relative aspect-[4/5] bg-[#D8D6D2] p-6 flex flex-col justify-between overflow-hidden select-none">
+                        <!-- Sombra arquitetônica suave -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-[#C7C4BF] via-[#DCDAD6] to-[#EAE8E4]"></div>
+
+                        <!-- Selo Superior -->
+                        <div class="relative z-10 flex justify-between items-center">
+                            <span class="px-2.5 py-1 rounded-md bg-[#141414] text-white text-[10px] font-extrabold uppercase tracking-wider">
+                                Modelo 03 • Adaptável
+                            </span>
+                            <span class="text-[10px] text-neutral-700 font-semibold">Clean &amp; Lifestyle</span>
+                        </div>
+
+                        <!-- Título Geométrico Forte -->
+                        <div class="relative z-10 text-center mt-2">
+                            <div class="font-display font-black text-3xl tracking-tight text-[#121212]">
+                                EXEMPLO
+                            </div>
+                            <div class="text-[8.5px] tracking-[0.22em] text-neutral-800 font-semibold uppercase mt-0.5">
+                                QUALIDADE • ESTILO • PRATICIDADE
+                            </div>
+                            <div class="w-36 h-[1px] bg-neutral-800/40 mx-auto mt-2"></div>
+                        </div>
+
+                        <!-- Centro: Ícones à esquerda + Garrafa Fosca à direita -->
+                        <div class="relative z-10 grid grid-cols-12 items-center my-auto py-2">
+                            <div class="col-span-6 space-y-3 pl-1">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-6 h-6 rounded-full border border-neutral-900 flex items-center justify-center text-[10px] text-neutral-900 shrink-0">❄</span>
+                                    <span class="text-[8px] leading-tight text-neutral-900 font-medium">Mantém a temperatura</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="w-6 h-6 rounded-full border border-neutral-900 flex items-center justify-center text-[10px] text-neutral-900 shrink-0">💧</span>
+                                    <span class="text-[8px] leading-tight text-neutral-900 font-medium">À prova de vazamentos</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="w-6 h-6 rounded-full border border-neutral-900 flex items-center justify-center text-[10px] text-neutral-900 shrink-0">🍃</span>
+                                    <span class="text-[8px] leading-tight text-neutral-900 font-medium">Leve e resistente</span>
+                                </div>
+                            </div>
+                            <div class="col-span-6 flex justify-center">
+                                <!-- Vetor Garrafa Térmica Preta Fosca -->
+                                <svg class="w-28 h-36 drop-shadow-[0_12px_16px_rgba(0,0,0,0.25)]" viewBox="0 0 110 150" fill="none">
+                                    <g transform="rotate(8 55 75)">
+                                        <!-- Tampa -->
+                                        <rect x="40" y="14" width="30" height="18" rx="4" fill="#1F1F1F"/>
+                                        <!-- Pescoço -->
+                                        <path d="M42 32H68L74 48H36L42 32Z" fill="#181818"/>
+                                        <!-- Corpo fosco -->
+                                        <rect x="33" y="46" width="44" height="90" rx="10" fill="url(#bottleGrad)"/>
+                                    </g>
+                                    <defs>
+                                        <linearGradient id="bottleGrad" x1="33" y1="46" x2="77" y2="136" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#2B2B2B"/>
+                                            <stop offset="0.5" stop-color="#171717"/>
+                                            <stop offset="1" stop-color="#0D0D0D"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Botão Pílula Escuro -->
+                        <div class="relative z-10 text-center">
+                            <div class="inline-block px-6 py-2 rounded-full bg-[#121212] text-white font-bold text-[9px] tracking-[0.2em] uppercase">
+                                GARANTA JÁ O SEU!
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Informações do Card -->
+                    <div class="p-6 flex-1 flex flex-col justify-between bg-paper-light">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-2">
+                                <span class="text-xs font-bold uppercase tracking-wider text-slatebrand-muted">Modelo Minimalista Clean</span>
+                                <span class="text-xs font-medium px-2 py-0.5 rounded bg-paper-dark text-slatebrand">Lifestyle &amp; E-commerce</span>
+                            </div>
+                            <h3 class="font-display text-lg font-bold text-slatebrand group-hover:text-slatebrand-light transition-colors">
+                                Modelo 03 — Minimalismo Funcional
+                            </h3>
+                            <p class="text-sm text-slatebrand-muted mt-2 leading-relaxed">
+                                Estética limpa em tons neutros e iluminação natural. Facilita a leitura rápida dos atributos físicos do produto sem poluição visual.
+                            </p>
+                        </div>
+                        <div class="pt-4 mt-4 border-t border-paper-border flex items-center justify-between text-xs font-semibold text-slatebrand">
+                            <span>Ver estrutura e especificações</span>
+                            <span class="group-hover:translate-x-1 transition-transform">→</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ==================== PROJETO AUTORAL 04 (IDENTIDADE AVANTE DESIGN) ==================== -->
+                <article data-category="autoral" onclick="openProjectModal('autoral1')" class="portfolio-item card-hover cursor-pointer group paper-surface rounded-2xl border border-paper-border overflow-hidden flex flex-col">
+                    <div class="relative aspect-[4/5] bg-paper p-6 flex flex-col justify-between border-b border-paper-border overflow-hidden select-none">
+                        <!-- Grid arquitetônico de fundo -->
+                        <div class="absolute inset-0 opacity-30" style="background-image: linear-gradient(to right, #26344222 1px, transparent 1px), linear-gradient(to bottom, #26344222 1px, transparent 1px); background-size: 28px 28px;"></div>
+
+                        <div class="relative z-10 flex justify-between items-center">
+                            <span class="px-2.5 py-1 rounded-md bg-slatebrand text-paper-light text-[10px] font-bold uppercase tracking-wider">
+                                Criação do Zero
+                            </span>
+                            <span class="text-[10px] text-slatebrand-muted font-semibold">Branding &amp; Sistema</span>
+                        </div>
+
+                        <!-- Destaque Central da Logo + Grid Construtivo -->
+                        <div class="relative z-10 my-auto bg-paper-light/90 border border-paper-border rounded-xl p-6 text-center shadow-sm">
+                            <div class="font-logo text-2xl font-bold tracking-wider text-slatebrand">AVANTE</div>
+                            <div class="text-[10px] font-bold tracking-[0.4em] text-slatebrand mt-1">DESIGN</div>
+                            <div class="w-12 h-[1.5px] bg-slatebrand mx-auto my-3"></div>
+                            <div class="flex justify-center gap-2 mt-3">
+                                <span class="w-6 h-6 rounded-full bg-[#263442] border border-paper-border" title="#263442"></span>
+                                <span class="w-6 h-6 rounded-full bg-[#5C6B79] border border-paper-border" title="#5C6B79"></span>
+                                <span class="w-6 h-6 rounded-full bg-[#EAE6DF] border border-paper-border" title="#EAE6DF"></span>
+                                <span class="w-6 h-6 rounded-full bg-[#FAF9F6] border border-paper-border" title="#FAF9F6"></span>
+                            </div>
+                        </div>
+
+                        <div class="relative z-10 flex justify-between items-center text-[10px] font-mono text-slatebrand-muted">
+                            <span>GRID: 12 COL / 8PT</span>
+                            <span>CROMIA: PANTONE 432 C</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 flex-1 flex flex-col justify-between bg-paper-light">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-2">
+                                <span class="text-xs font-bold uppercase tracking-wider text-slatebrand">Identidade Autoral</span>
+                                <span class="text-xs font-medium px-2 py-0.5 rounded bg-paper-dark text-slatebrand">Branding</span>
+                            </div>
+                            <h3 class="font-display text-lg font-bold text-slatebrand group-hover:text-slatebrand-light transition-colors">
+                                Sistema de Marca — Avante Design
+                            </h3>
+                            <p class="text-sm text-slatebrand-muted mt-2 leading-relaxed">
+                                Desenvolvimento autoral da marca do estúdio: tipografia serifada customizada com vetor de direção ascendente, paleta em azul-ardósia e textura editorial.
+                            </p>
+                        </div>
+                        <div class="pt-4 mt-4 border-t border-paper-border flex items-center justify-between text-xs font-semibold text-slatebrand">
+                            <span>Explorar construção da marca</span>
+                            <span class="group-hover:translate-x-1 transition-transform">→</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ==================== PROJETO AUTORAL 05 (CAFETERIA ORIGEM - EMBALAGEM) ==================== -->
+                <article data-category="autoral" onclick="openProjectModal('autoral2')" class="portfolio-item card-hover cursor-pointer group paper-surface rounded-2xl border border-paper-border overflow-hidden flex flex-col">
+                    <div class="relative aspect-[4/5] bg-[#EAE4D7] p-6 flex flex-col justify-between border-b border-paper-border overflow-hidden select-none">
+                        <div class="relative z-10 flex justify-between items-center">
+                            <span class="px-2.5 py-1 rounded-md bg-slatebrand text-paper-light text-[10px] font-bold uppercase tracking-wider">
+                                Criação do Zero
+                            </span>
+                            <span class="text-[10px] text-stone-600 font-semibold">Branding &amp; Rótulo</span>
+                        </div>
+
+                        <!-- Mockup Editorial de Rótulo Minimalista -->
+                        <div class="relative z-10 my-auto mx-auto w-48 bg-[#FAF8F5] border border-stone-300 rounded-lg p-5 shadow-md text-center">
+                            <div class="text-[8px] uppercase tracking-[0.3em] text-stone-500">Torrefação Especial</div>
+                            <div class="font-serif text-2xl font-bold text-stone-900 mt-1 tracking-wide">ORIGEM</div>
+                            <div class="w-full h-[1px] bg-stone-300 my-2.5"></div>
+                            <div class="text-[9px] text-stone-700 font-medium">Lote 04 • Cerrado Mineiro</div>
+                            <div class="text-[8px] text-stone-500 mt-0.5">Notas: Cacau, Caramelo &amp; Nozes</div>
+                            <div class="mt-3 pt-2 border-t border-dashed border-stone-300 flex justify-between text-[7px] font-mono text-stone-600">
+                                <span>ALT: 1.150M</span>
+                                <span>250G</span>
+                            </div>
+                        </div>
+
+                        <div class="relative z-10 text-center text-[10px] font-medium text-stone-600">
+                            Design de Embalagem, Tipografia &amp; Guia Visual
+                        </div>
+                    </div>
+
+                    <div class="p-6 flex-1 flex flex-col justify-between bg-paper-light">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-2">
+                                <span class="text-xs font-bold uppercase tracking-wider text-slatebrand">Identidade Autoral</span>
+                                <span class="text-xs font-medium px-2 py-0.5 rounded bg-paper-dark text-slatebrand">Embalagem</span>
+                            </div>
+                            <h3 class="font-display text-lg font-bold text-slatebrand group-hover:text-slatebrand-light transition-colors">
+                                Origem Torrefação — Identidade &amp; Rótulos
+                            </h3>
+                            <p class="text-sm text-slatebrand-muted mt-2 leading-relaxed">
+                                Projeto completo criado do zero para cafeteria artesanal. Sistema modular de rótulos que facilita a identificação de notas sensoriais e origem do grão.
+                            </p>
+                        </div>
+                        <div class="pt-4 mt-4 border-t border-paper-border flex items-center justify-between text-xs font-semibold text-slatebrand">
+                            <span>Explorar construção da marca</span>
+                            <span class="group-hover:translate-x-1 transition-transform">→</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ==================== PROJETO AUTORAL 06 (ESTÚDIO TRAÇO - DIREÇÃO DE ARTE) ==================== -->
+                <article data-category="autoral" onclick="openProjectModal('autoral3')" class="portfolio-item card-hover cursor-pointer group paper-surface rounded-2xl border border-paper-border overflow-hidden flex flex-col">
+                    <div class="relative aspect-[4/5] bg-[#263442] p-6 flex flex-col justify-between overflow-hidden select-none text-paper-light">
+                        <div class="relative z-10 flex justify-between items-center">
+                            <span class="px-2.5 py-1 rounded-md bg-paper-light text-slatebrand text-[10px] font-bold uppercase tracking-wider">
+                                Criação do Zero
+                            </span>
+                            <span class="text-[10px] text-paper-dark/80 font-semibold">Direção de Arte</span>
+                        </div>
+
+                        <!-- Composição Grid Suíço -->
+                        <div class="relative z-10 my-auto border border-paper-light/25 p-5 rounded-lg space-y-4">
+                            <div class="flex justify-between items-baseline border-b border-paper-light/20 pb-2">
+                                <span class="font-display text-xl font-bold tracking-tight">TRAÇO.ARQ</span>
+                                <span class="text-[9px] font-mono text-paper-dark/70">PORTFÓLIO 01</span>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 h-20">
+                                <div class="bg-paper-light/10 rounded flex items-end p-1.5 text-[7px] font-mono">01. FORMA</div>
+                                <div class="bg-paper-light/20 rounded flex items-end p-1.5 text-[7px] font-mono">02. LUZ</div>
+                                <div class="bg-paper-light/10 rounded flex items-end p-1.5 text-[7px] font-mono">03. ESPAÇO</div>
+                            </div>
+                            <p class="text-[9px] text-paper-dark/80 leading-relaxed">
+                                Sistema editorial baseado no estilo tipográfico internacional suíço para apresentações de arquitetura.
+                            </p>
+                        </div>
+
+                        <div class="relative z-10 flex justify-between text-[10px] font-mono text-paper-dark/70">
+                            <span>SWISS GRID SYSTEM</span>
+                            <span>EDITORIAL &amp; DIGITAL</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 flex-1 flex flex-col justify-between bg-paper-light">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-2">
+                                <span class="text-xs font-bold uppercase tracking-wider text-slatebrand">Identidade Autoral</span>
+                                <span class="text-xs font-medium px-2 py-0.5 rounded bg-paper-dark text-slatebrand">Editorial</span>
+                            </div>
+                            <h3 class="font-display text-lg font-bold text-slatebrand group-hover:text-slatebrand-light transition-colors">
+                                Traço Arquitetura — Direção Visual &amp; Editorial
+                            </h3>
+                            <p class="text-sm text-slatebrand-muted mt-2 leading-relaxed">
+                                Criação autoral de linguagem visual, apresentações institucionais e diretrizes para redes sociais utilizando proporções áureas e tipografia minimalista.
+                            </p>
+                        </div>
+                        <div class="pt-4 mt-4 border-t border-paper-border flex items-center justify-between text-xs font-semibold text-slatebrand">
+                            <span>Explorar construção da marca</span>
+                            <span class="group-hover:translate-x-1 transition-transform">→</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SEÇÃO: DOIS CAMINHOS (MODELOS VS. CRIAÇÃO DO ZERO) ==================== -->
+    <section id="metodologia" class="py-20 bg-paper-dark/60 border-y border-paper-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center space-y-3 mb-14">
+                <span class="text-xs font-bold uppercase tracking-widest text-slatebrand-muted">Flexibilidade Estratégica</span>
+                <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slatebrand">
+                    Não trabalhamos apenas com modelos prontos
+                </h2>
+                <p class="text-slatebrand-muted text-base leading-relaxed">
+                    Cada negócio possui um momento e uma necessidade diferente. Na Avante Design, você escolhe o formato ideal entre agilidade comercial ou construção exclusiva de identidade do zero.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Card Via 01: Modelos Adaptáveis -->
+                <div class="paper-surface rounded-2xl border border-paper-border p-8 sm:p-10 flex flex-col justify-between">
+                    <div class="space-y-5">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-paper-dark text-slatebrand text-xs font-bold uppercase tracking-wider">
+                            Formato 01 • Agilidade &amp; Performance
+                        </div>
+                        <h3 class="font-display text-2xl font-bold text-slatebrand">
+                            Adaptação de Modelos Estratégicos
+                        </h3>
+                        <p class="text-sm text-slatebrand-muted leading-relaxed">
+                            Utilizamos as estruturas visuais apresentadas no catálogo (como os Modelos 01, 02 e 03) como base arquitetônica comprovada, substituindo produtos, cores, ícones e textos para a realidade da sua oferta.
+                        </p>
+                        <ul class="space-y-3 pt-2 text-sm text-slatebrand">
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-slatebrand font-bold">✓</span>
+                                <span>Hierarquia visual já testada para leitura rápida e conversão;</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-slatebrand font-bold">✓</span>
+                                <span>Prazo de entrega reduzido para campanhas, anúncios e catálogos;</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-slatebrand font-bold">✓</span>
+                                <span>Ajuste cromático e tipográfico alinhado ao seu produto.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pt-8 mt-8 border-t border-paper-border">
+                        <a href="#orcamento" onclick="preselectScope('Adaptação de Modelos para Social/Ads')" class="inline-flex items-center gap-2 text-sm font-bold text-slatebrand hover:underline">
+                            Solicitar este formato →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card Via 02: Criação Autoral do Zero -->
+                <div class="rounded-2xl bg-slatebrand text-paper-light p-8 sm:p-10 flex flex-col justify-between shadow-xl">
+                    <div class="space-y-5">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-paper-light/10 text-paper-light text-xs font-bold uppercase tracking-wider">
+                            Formato 02 • Exclusividade &amp; Posicionamento
+                        </div>
+                        <h3 class="font-display text-2xl font-bold text-paper-light">
+                            Criação Autoral 100% do Zero
+                        </h3>
+                        <p class="text-sm text-paper-dark/85 leading-relaxed">
+                            Para empresas e profissionais que desejam construir uma identidade própria, autêntica e inesquecível — sem depender de templates. Desenvolvemos todo o universo visual da sua marca a partir de uma folha em branco.
+                        </p>
+                        <ul class="space-y-3 pt-2 text-sm text-paper-light">
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-paper-dark font-bold">✓</span>
+                                <span>Diagnóstico de posicionamento, público-alvo e diferenciação;</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-paper-dark font-bold">✓</span>
+                                <span>Criação de logotipo exclusivo, símbolo, paleta cromática e tipografia;</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-paper-dark font-bold">✓</span>
+                                <span>Manual de Identidade Visual (Brandbook) e aplicações personalizadas.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pt-8 mt-8 border-t border-paper-light/15">
+                        <a href="#orcamento" onclick="preselectScope('Identidade Visual Completa do Zero')" class="inline-flex items-center gap-2 text-sm font-bold text-paper-light hover:underline">
+                            Criar minha identidade do zero →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SEÇÃO: FUNDAMENTOS & REFERÊNCIAS TÉCNICAS ==================== -->
+    <section id="fundamentos" class="py-20 lg:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl space-y-3 mb-14">
+                <span class="text-xs font-bold uppercase tracking-widest text-slatebrand-muted">Base Teórica &amp; Autoridade Técnica</span>
+                <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slatebrand">
+                    Fundamentos que guiam cada decisão visual
+                </h2>
+                <p class="text-slatebrand-muted text-base leading-relaxed">
+                    Bom design não é questão de gosto subjetivo — é engenharia de comunicação respaldada pelos principais pesquisadores e teóricos do design gráfico mundial.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Pilar 1: Josef Müller-Brockmann -->
+                <div class="paper-surface rounded-2xl border border-paper-border p-6 flex flex-col justify-between space-y-4">
+                    <div>
+                        <span class="text-xs font-mono font-bold text-slatebrand-muted">01 / SISTEMAS DE GRID</span>
+                        <h3 class="font-display text-lg font-bold text-slatebrand mt-2">Ordem &amp; Clareza Estrutural</h3>
+                        <p class="text-sm text-slatebrand-muted mt-2 leading-relaxed">
+                            "O sistema de grid é uma ajuda, não uma garantia. Ele permite ao designer construir uma estrutura clara, lógica e objetiva."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-paper-border">
+                        <div class="text-xs font-bold text-slatebrand">Josef Müller-Brockmann</div>
+                        <div class="text-[11px] text-slatebrand-muted">Grid Systems in Graphic Design</div>
+                    </div>
+                </div>
+
+                <!-- Pilar 2: Ellen Lupton -->
+                <div class="paper-surface rounded-2xl border border-paper-border p-6 flex flex-col justify-between space-y-4">
+                    <div>
+                        <span class="text-xs font-mono font-bold text-slatebrand-muted">02 / HIERARQUIA TIPOGRÁFICA</span>
+                        <h3 class="font-display text-lg font-bold text-slatebrand mt-2">Direção do Olhar</h3>
+                        <p class="text-sm text-slatebrand-muted mt-2 leading-relaxed">
+                            Contrastes de peso, escala e espaçamento organizam a informação para que o leitor absorva a mensagem principal em segundos.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-paper-border">
+                        <div class="text-xs font-bold text-slatebrand">Ellen Lupton</div>
+                        <div class="text-[11px] text-slatebrand-muted">Thinking with Type (MICA)</div>
+                    </div>
+                </div>
+
+                <!-- Pilar 3: Nielsen Norman Group -->
+                <div class="paper-surface rounded-2xl border border-paper-border p-6 flex flex-col justify-between space-y-4">
+                    <div>
+                        <span class="text-xs font-mono font-bold text-slatebrand-muted">03 / ESCANEABILIDADE</span>
+                        <h3 class="font-display text-lg font-bold text-slatebrand mt-2">Leitura em Padrão F e Z</h3>
+                        <p class="text-sm text-slatebrand-muted mt-2 leading-relaxed">
+                            Usuários não leem peças digitais palavra por palavra; eles escaneiam pontos focais. Nossos layouts posicionam benefícios e CTAs nas zonas de maior fixação visual.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-paper-border">
+                        <div class="text-xs font-bold text-slatebrand">Nielsen Norman Group</div>
+                        <div class="text-[11px] text-slatebrand-muted">Eye-Tracking &amp; Visual Hierarchy Studies</div>
+                    </div>
+                </div>
+
+                <!-- Pilar 4: Paul Rand -->
+                <div class="paper-surface rounded-2xl border border-paper-border p-6 flex flex-col justify-between space-y-4">
+                    <div>
+                        <span class="text-xs font-mono font-bold text-slatebrand-muted">04 / SÍNTESE DE MARCA</span>
+                        <h3 class="font-display text-lg font-bold text-slatebrand mt-2">Simplicidade Memorável</h3>
+                        <p class="text-sm text-slatebrand-muted mt-2 leading-relaxed">
+                            "Um logotipo não vende diretamente; ele identifica. Ele extrai seu significado da qualidade daquilo que simboliza."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-paper-border">
+                        <div class="text-xs font-bold text-slatebrand">Paul Rand</div>
+                        <div class="text-[11px] text-slatebrand-muted">Design, Form, and Chaos</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SEÇÃO: CONFIGURADOR INTERATIVO DE ESCOPO & CONTATO ==================== -->
+    <section id="orcamento" class="py-20 bg-paper-dark/60 border-t border-paper-border">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="paper-surface rounded-3xl border border-paper-border p-6 sm:p-10 lg:p-12 shadow-lg">
+                <div class="max-w-2xl mb-8">
+                    <span class="text-xs font-bold uppercase tracking-widest text-slatebrand-muted">Atendimento Direto</span>
+                    <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slatebrand mt-1">
+                        Configure o escopo do seu projeto
+                    </h2>
+                    <p class="text-sm text-slatebrand-muted mt-2">
+                        Selecione o formato desejado abaixo para gerar automaticamente um briefing resumido pronto para iniciar nossa conversa.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <!-- Formulário Interativo -->
+                    <div class="lg:col-span-7 space-y-5">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slatebrand mb-2">
+                                1. Qual formato você procura?
+                            </label>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="scope-options">
+                                <button type="button" onclick="selectScopeOption(this, 'Identidade Visual Completa do Zero')" class="scope-choice active text-left p-3.5 rounded-xl border-2 border-slatebrand bg-paper text-slatebrand transition-all">
+                                    <div class="font-bold text-sm">Criação do Zero</div>
+                                    <div class="text-xs text-slatebrand-muted mt-0.5">Logo, paleta, tipografia &amp; manual</div>
+                                </button>
+                                <button type="button" onclick="selectScopeOption(this, 'Adaptação de Modelos para Social/Ads')" class="scope-choice text-left p-3.5 rounded-xl border border-paper-border bg-paper-light text-slatebrand hover:border-slatebrand-muted transition-all">
+                                    <div class="font-bold text-sm">Modelos Adaptáveis</div>
+                                    <div class="text-xs text-slatebrand-muted mt-0.5">Criativos baseados nos Modelos 01–03</div>
+                                </button>
+                                <button type="button" onclick="selectScopeOption(this, 'Identidade Visual + Pack de Modelos')" class="scope-choice text-left p-3.5 rounded-xl border border-paper-border bg-paper-light text-slatebrand hover:border-slatebrand-muted transition-all">
+                                    <div class="font-bold text-sm">Pacote Completo</div>
+                                    <div class="text-xs text-slatebrand-muted mt-0.5">Marca autoral + templates editáveis</div>
+                                </button>
+                                <button type="button" onclick="selectScopeOption(this, 'Embalagem / Material Editorial')" class="scope-choice text-left p-3.5 rounded-xl border border-paper-border bg-paper-light text-slatebrand hover:border-slatebrand-muted transition-all">
+                                    <div class="font-bold text-sm">Editorial &amp; Rótulos</div>
+                                    <div class="text-xs text-slatebrand-muted mt-0.5">Embalagens, catálogos e apresentações</div>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="client-name" class="block text-xs font-bold uppercase tracking-wider text-slatebrand mb-1.5">2. Seu Nome ou Marca</label>
+                                <input type="text" id="client-name" oninput="updateBriefingPreview()" placeholder="Ex: Studio Horizonte" class="w-full px-4 py-2.5 rounded-xl bg-paper border border-paper-border text-sm text-slatebrand focus:outline-none focus:border-slatebrand">
+                            </div>
+                            <div>
+                                <label for="client-segment" class="block text-xs font-bold uppercase tracking-wider text-slatebrand mb-1.5">3. Segmento de Atuação</label>
+                                <input type="text" id="client-segment" oninput="updateBriefingPreview()" placeholder="Ex: Tecnologia, Moda, Cafeteria..." class="w-full px-4 py-2.5 rounded-xl bg-paper border border-paper-border text-sm text-slatebrand focus:outline-none focus:border-slatebrand">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="client-notes" class="block text-xs font-bold uppercase tracking-wider text-slatebrand mb-1.5">4. Objetivo Principal (Opcional)</label>
+                            <textarea id="client-notes" rows="2" oninput="updateBriefingPreview()" placeholder="Conte brevemente o que deseja comunicar ou qual modelo chamou sua atenção..." class="w-full px-4 py-2.5 rounded-xl bg-paper border border-paper-border text-sm text-slatebrand focus:outline-none focus:border-slatebrand"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Resumo Automático do Briefing -->
+                    <div class="lg:col-span-5 flex flex-col justify-between bg-paper rounded-2xl border border-paper-border p-6">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-xs font-bold uppercase tracking-wider text-slatebrand">Resumo do Briefing</span>
+                                <span class="text-[11px] px-2 py-0.5 rounded bg-paper-dark text-slatebrand-muted font-medium">Pronto para envio</span>
+                            </div>
+                            <div id="briefing-output" class="text-xs sm:text-sm text-slatebrand bg-paper-light border border-paper-border rounded-xl p-4 leading-relaxed font-mono whitespace-pre-line"></div>
+                        </div>
+
+                        <div class="space-y-2.5 mt-6">
+                            <button type="button" onclick="copyBriefing()" class="w-full py-3 px-4 rounded-xl bg-slatebrand text-paper-light font-semibold text-sm hover:bg-slatebrand-dark transition-all flex items-center justify-center gap-2 shadow-sm">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                                Copiar Briefing para Enviar
+                            </button>
+                            <p id="copy-feedback" class="text-center text-xs font-semibold text-emerald-700 hidden">
+                                ✓ Briefing copiado! Agora é só colar no WhatsApp ou E-mail.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER MINIMALISTA ==================== -->
+    <footer class="bg-paper border-t border-paper-border py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <svg class="h-9 w-auto" viewBox="0 0 290 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#263442">
+                        <path d="M22 42L36 10H42L56 42H49.5L46 33.5H32L28.5 42H22ZM34.2 28H43.8L39 16.5L34.2 28Z"/>
+                        <path d="M56 10H62.8L73 34.5L83.2 10H90L75.5 42H70.5L56 10Z"/>
+                        <path d="M12 45C24 39 33 31 44 33C53 34.5 64 26 78 13L73 10.5L87 7L84.5 21L81.5 16.5C66 30.5 54 39.5 43 38C33 36.5 24 44 14 48.5L12 45Z"/>
+                        <path d="M92 42L106 10H112L126 42H119.5L116 33.5H102L98.5 42H92ZM104.2 28H113.8L109 16.5L104.2 28Z"/>
+                        <path d="M133 42V10H139L157 32.5V10H163V42H157.5L139 19V42H133Z"/>
+                        <path d="M170 10H198V15.5H187V42H181V15.5H170V10Z"/>
+                        <path d="M205 10H230V15.5H211V23H227V28.5H211V36.5H231V42H205V10Z"/>
+                    </g>
+                    <text x="126" y="59" text-anchor="middle" fill="#263442" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="13.5" letter-spacing="5.5">DESIGN</text>
+                    <text x="126" y="72" text-anchor="middle" fill="#5C6B79" font-family="'Inter', sans-serif" font-weight="600" font-size="7.5" letter-spacing="3.2">GRAPHIC &amp; BRANDING</text>
+                </svg>
+            </div>
+            <p class="text-xs text-slatebrand-muted text-center sm:text-right">
+                © <span id="current-year"></span> Avante Design — Graphic &amp; Branding. Todos os direitos reservados.<br>
+                Identidade Visual • Direção de Arte • Modelos de Alta Conversão.
+            </p>
+        </div>
+    </footer>
+
+    <!-- ==================== MODAL INTERATIVO DE DETALHES DO PROJETO ==================== -->
+    <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slatebrand-dark/70 backdrop-blur-sm" role="dialog" aria-modal="true">
+        <div class="paper-surface rounded-2xl border border-paper-border max-w-2xl w-full overflow-hidden shadow-2xl transform transition-all">
+            <div class="px-6 py-4 bg-paper border-b border-paper-border flex items-center justify-between">
+                <span id="modal-badge" class="px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-slatebrand text-paper-light">
+                    Categoria
+                </span>
+                <button onclick="closeProjectModal()" class="p-2 rounded-lg text-slatebrand-muted hover:text-slatebrand hover:bg-paper-dark transition-colors" aria-label="Fechar janela">
+                    ✕
+                </button>
+            </div>
+            <div class="p-6 sm:p-8 space-y-5 max-h-[80vh] overflow-y-auto">
+                <div>
+                    <h3 id="modal-title" class="font-display text-2xl font-extrabold text-slatebrand">Título do Projeto</h3>
+                    <p id="modal-subtitle" class="text-xs font-semibold uppercase tracking-wider text-slatebrand-muted mt-1">Subtítulo técnico</p>
+                </div>
+                
+                <p id="modal-description" class="text-sm text-slatebrand leading-relaxed"></p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                    <div class="p-4 rounded-xl bg-paper border border-paper-border">
+                        <div class="text-[11px] font-bold uppercase tracking-wider text-slatebrand-muted">Arquitetura &amp; Hierarquia</div>
+                        <p id="modal-architecture" class="text-xs text-slatebrand mt-1.5 leading-relaxed"></p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-paper border border-paper-border">
+                        <div class="text-[11px] font-bold uppercase tracking-wider text-slatebrand-muted">O que pode ser personalizado</div>
+                        <p id="modal-customization" class="text-xs text-slatebrand mt-1.5 leading-relaxed"></p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="text-[11px] font-bold uppercase tracking-wider text-slatebrand-muted mb-2">Paleta Cromática Aplicada</div>
+                    <div id="modal-palette" class="flex flex-wrap gap-2"></div>
+                </div>
+
+                <div class="pt-4 border-t border-paper-border flex flex-wrap justify-end gap-3">
+                    <button onclick="closeProjectModal()" class="px-4 py-2.5 rounded-xl border border-paper-border text-xs font-semibold text-slatebrand hover:bg-paper-dark">
+                        Fechar
+                    </button>
+                    <a href="#orcamento" onclick="selectFromModal()" class="px-5 py-2.5 rounded-xl bg-slatebrand text-paper-light text-xs font-semibold hover:bg-slatebrand-dark">
+                        Solicitar este estilo de projeto →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== SCRIPTS DE INTERATIVIDADE ==================== -->
+    <script>
+        // Ano atual dinâmico
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Menu Mobile Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Base de dados técnica dos Modelos e Projetos Autorais
+        const projectsData = {
+            modelo1: {
+                badge: 'Modelo 01 • Adaptável',
+                title: 'Tech & Impacto Comercial (Exemplo Fones Bluetooth)',
+                subtitle: 'Arquitetura de Alta Conversão para Social Media & Tráfego Pago',
+                description: 'Este é um modelo estratégico desenvolvido para produtos tecnológicos e lançamentos que exigem impacto visual imediato no feed ou em anúncios patrocinados. O halo luminoso central cria um ponto focal magnético ao redor do produto.',
+                architecture: 'Leitura em Z: Título itálico pesado no topo para retenção, produto centralizado com luz de recorte, 4 ícones laterais para escaneabilidade rápida e botão CTA de alto contraste na base.',
+                customization: 'Substituição completa do produto central, alteração da cor de destaque (âmbar, azul elétrico, esmeralda), troca dos 4 ícones de benefícios e adaptação de copy.',
+                palette: ['#0B0B0C', '#F59E0B', '#FBBF24', '#FFFFFF'],
+                scopeTarget: 'Adaptação de Modelos para Social/Ads'
+            },
+            modelo2: {
+                badge: 'Modelo 02 • Adaptável',
+                title: 'Editorial Sofisticado & Luxo (Exemplo Relógio Clássico)',
+                subtitle: 'Posicionamento Premium para Marcas de Alto Valor Agregado',
+                description: 'Estrutura projetada para transmitir exclusividade, tradição e refinamento. O uso de luz diagonal suave e tipografia serifada de alto contraste eleva a percepção de valor do item apresentado.',
+                architecture: 'Equilíbrio assimétrico com amplo respiro visual, filetes finos em dourado champanhe e CTA minimalista vazado que evita a sensação de "panfleto agressivo".',
+                customization: 'Ideal para relojoaria, joalheria, estética avançada, advocacia, arquitetura e produtos gourmet. Totalmente adaptável à paleta e fotografia do cliente.',
+                palette: ['#181614', '#D6BE96', '#F5EFE6', '#57534E'],
+                scopeTarget: 'Adaptação de Modelos para Social/Ads'
+            },
+            modelo3: {
+                badge: 'Modelo 03 • Adaptável',
+                title: 'Minimalismo Escandinavo & Clean (Exemplo Garrafa Térmica)',
+                subtitle: 'Comunicação Clara e Direta para Lifestyle & E-commerce',
+                description: 'Modelo limpo em tons neutros claros com sombras arquitetônicas naturais. Perfeito para marcas modernas que valorizam transparência, sustentabilidade e design funcional.',
+                architecture: 'Tipografia geométrica sem serifa em caixa alta, divisão clara entre atributos técnicos à esquerda e silhueta do produto à direita sobre base de concreto.',
+                customization: 'Adaptável para cosméticos, utilidades domésticas, bebidas, vestuário minimalista e produtos físicos em geral.',
+                palette: ['#D8D6D2', '#121212', '#EAE8E4', '#525252'],
+                scopeTarget: 'Adaptação de Modelos para Social/Ads'
+            },
+            autoral1: {
+                badge: 'Criação do Zero • Identidade Visual',
+                title: 'Sistema de Marca — Avante Design',
+                subtitle: 'Branding Proprietário, Tipografia Customizada & Sistema Visual',
+                description: 'Projeto autoral criado do zero para representar o próprio estúdio. A construção parte da união entre a solidez clássica da tipografia serifada e o movimento progressivo representado pela seta integrada entre as letras A e V.',
+                architecture: 'Construção sobre grid modular com proporções equilibradas, paleta sóbria em azul-ardósia profundo (#263442) e textura de papel algodão (#F4F2EE) que remete ao design editorial clássico.',
+                customization: 'Este projeto demonstra nossa capacidade de criar marcas 100% originais do zero, desde o conceito até o manual de aplicação.',
+                palette: ['#263442', '#5C6B79', '#F4F2EE', '#FAF9F6'],
+                scopeTarget: 'Identidade Visual Completa do Zero'
+            },
+            autoral2: {
+                badge: 'Criação do Zero • Branding & Embalagem',
+                title: 'Origem Torrefação Artesanal',
+                subtitle: 'Identidade Visual Completa & Sistema de Rótulos',
+                description: 'Desenvolvimento completo de identidade visual e arquitetura de embalagens para marca de cafés especiais. O desafio foi organizar informações técnicas (altitude, variedade, notas sensoriais) com estética limpa e acolhedora.',
+                architecture: 'Sistema modular tipográfico que permite imprimir diferentes safras mantendo a mesma unidade visual na prateleira e no ambiente digital.',
+                customization: 'Criamos do zero toda a identidade, embalagens, selos e guia de estilo da sua marca.',
+                palette: ['#1C1917', '#EAE4D7', '#FAF8F5', '#78716C'],
+                scopeTarget: 'Embalagem / Material Editorial'
+            },
+            autoral3: {
+                badge: 'Criação do Zero • Direção de Arte',
+                title: 'Traço Arquitetura & Interiores',
+                subtitle: 'Sistema Editorial baseado no Grid Suíço',
+                description: 'Criação de identidade visual, apresentações comerciais e direção de arte para escritório de arquitetura contemporânea. Foco total na valorização das fotografias dos projetos sem ruído gráfico.',
+                architecture: 'Uso rigoroso de alinhamentos matemáticos, tipografia grotesca limpa e contraste entre azul-ardósia e branco marfim.',
+                customization: 'Desenvolvimento exclusivo para escritórios, consultorias, clínicas e empresas B2B.',
+                palette: ['#263442', '#FAF9F6', '#D6D1C7', '#3A4D60'],
+                scopeTarget: 'Identidade Visual Completa do Zero'
+            }
+        };
+
+        let currentModalProject = null;
+
+        // Filtro do Portfólio
+        function filterPortfolio(category) {
+            const items = document.querySelectorAll('.portfolio-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => {
+                if (btn.dataset.filter === category) {
+                    btn.classList.add('bg-slatebrand', 'text-paper-light', 'shadow-sm');
+                    btn.classList.remove('text-slatebrand-muted');
+                } else {
+                    btn.classList.remove('bg-slatebrand', 'text-paper-light', 'shadow-sm');
+                    btn.classList.add('text-slatebrand-muted');
+                }
+            });
+
+            items.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
+
+        // Abrir Modal de Detalhes
+        function openProjectModal(id) {
+            const data = projectsData[id];
+            if (!data) return;
+            currentModalProject = data;
+
+            document.getElementById('modal-badge').textContent = data.badge;
+            document.getElementById('modal-title').textContent = data.title;
+            document.getElementById('modal-subtitle').textContent = data.subtitle;
+            document.getElementById('modal-description').textContent = data.description;
+            document.getElementById('modal-architecture').textContent = data.architecture;
+            document.getElementById('modal-customization').textContent = data.customization;
+
+            const paletteContainer = document.getElementById('modal-palette');
+            paletteContainer.innerHTML = '';
+            data.palette.forEach(hex => {
+                const chip = document.createElement('div');
+                chip.className = 'inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-paper border border-paper-border text-xs font-mono text-slatebrand';
+                chip.innerHTML = `<span class="w-3.5 h-3.5 rounded-full border border-black/20" style="background-color:${hex}"></span>${hex}`;
+                paletteContainer.appendChild(chip);
+            });
+
+            const modal = document.getElementById('project-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeProjectModal() {
+            const modal = document.getElementById('project-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function selectFromModal() {
+            if (currentModalProject) {
+                preselectScope(currentModalProject.scopeTarget);
+            }
+            closeProjectModal();
+        }
+
+        // Fechar modal ao clicar fora
+        document.getElementById('project-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'project-modal') closeProjectModal();
+        });
+
+        // Configurador de Orçamento Interativo
+        let selectedScope = 'Identidade Visual Completa do Zero';
+
+        function selectScopeOption(btn, scopeName) {
+            selectedScope = scopeName;
+            document.querySelectorAll('.scope-choice').forEach(el => {
+                el.classList.remove('border-2', 'border-slatebrand', 'bg-paper');
+                el.classList.add('border', 'border-paper-border', 'bg-paper-light');
+            });
+            btn.classList.remove('border', 'border-paper-border', 'bg-paper-light');
+            btn.classList.add('border-2', 'border-slatebrand', 'bg-paper');
+            updateBriefingPreview();
+        }
+
+        function preselectScope(scopeName) {
+            selectedScope = scopeName;
+            document.querySelectorAll('.scope-choice').forEach(btn => {
+                if (btn.getAttribute('onclick').includes(scopeName)) {
+                    selectScopeOption(btn, scopeName);
+                }
+            });
+            updateBriefingPreview();
+        }
+
+        function updateBriefingPreview() {
+            const name = document.getElementById('client-name').value.trim() || '[Não informado]';
+            const segment = document.getElementById('client-segment').value.trim() || '[Não informado]';
+            const notes = document.getElementById('client-notes').value.trim();
+
+            let text = `Olá, Avante Design! Gostaria de solicitar uma proposta:\n\n`;
+            text += `• Formato: ${selectedScope}\n`;
+            text += `• Nome / Marca: ${name}\n`;
+            text += `• Segmento: ${segment}`;
+            if (notes) {
+                text += `\n• Detalhes: ${notes}`;
+            }
+
+            document.getElementById('briefing-output').textContent = text;
+        }
+
+        function copyBriefing() {
+            const text = document.getElementById('briefing-output').textContent;
+            const tempInput = document.createElement('textarea');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            const feedback = document.getElementById('copy-feedback');
+            feedback.classList.remove('hidden');
+            setTimeout(() => feedback.classList.add('hidden'), 4000);
+        }
+
+        // Inicializa o preview do briefing
+        updateBriefingPreview();
+    </script>
+</body>
+</html>
